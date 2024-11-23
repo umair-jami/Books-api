@@ -16,9 +16,7 @@ interface Book {
 
 // Fetch books data
 async function getBooks(): Promise<Book[]> {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/bookslist`, {
-    cache: "no-store", // Disable caching for fresh data on every request (Optional: adjust as needed)
-  });
+  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/bookslist`);
   if (!response.ok) {
     throw new Error("Failed to fetch books");
   }
