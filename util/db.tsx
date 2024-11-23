@@ -1,0 +1,38 @@
+export const books = [
+  {
+    id: 1,
+    title: "Forty Rule Of Love",
+    author: "Harper Lee",
+    genre: "Fiction",
+    yearPublished: 1960,
+    rating: 4.8,
+    summary: "A novel about racial injustice in the Deep South.",
+  },
+  {
+    id: 2,
+    title: "Silent Patient",
+    author: "George Orwell",
+    genre: "Dystopian",
+    yearPublished: 1949,
+    rating: 4.7,
+    summary: "A cautionary tale about totalitarianism and surveillance.",
+  },
+  {
+    id: 3,
+    title: "Harry Potter",
+    author: "Harry Potter",
+    genre: "Classic",
+    yearPublished: 1925,
+    rating: 4.5,
+    summary: "A critique of the American Dream set in the Jazz Age.",
+  },
+  {
+    id: 4,
+    title: "Ends with us",
+    author: "Herman Melville",
+    genre: "Adventure",
+    yearPublished: 1851,
+    rating: 4.0,
+    summary: "The quest for revenge against a white whale.",
+  },
+];
