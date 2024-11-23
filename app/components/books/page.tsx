@@ -6,7 +6,7 @@ import silent from "../../assets/silent.webp";
 import Image from "next/image";
 
 async function getBooks() {
-  let response = await fetch("http://localhost:3000/api/bookslist");
+  let response = await fetch("/api/bookslist");
   let data = await response.json();
   return data;
 }
