@@ -5,33 +5,29 @@ import ends from "../../assets/endswith.webp";
 import silent from "../../assets/silent.webp";
 import Image from "next/image";
 
-const imgBox = [love, harry, ends, silent];
-const getBooks=async ()=>{
-  const res = await fetch('http://localhost:3000/api/bookslist');
-  const data = await res.json();
-  return data
+async function getBooks() {
+  let response = await fetch("http://localhost:3000/api/bookslist");
+  let data = await response.json();
+  return data;
 }
 
+const imgBox = [love, harry, ends, silent];
+
 export default async function Books() {
-  // Fetch books data
   const books = await getBooks();
 
   return (
     <section className="min-h-[calc(100vh-4rem)] w-full px-4 py-8 lg:px-10">
       <div className="h-full container mx-auto">
-        {books.length === 0 ? ( // Show a message if no books are available
-          <p className="text-center text-gray-500 text-lg">
-            No books available at the moment. Please try again later.
-          </p>
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {books.map((item:any, i:any) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {books.map((item: any, i: any) => {
+            return (
               <div
                 key={i}
                 className="flex flex-col gap-4 justify-center items-center bg-slate-200 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
               >
                 <Image
-                  src={imgBox[i % imgBox.length]} // Cycle through images
+                  src={imgBox[i % imgBox.length]}
                   alt={item.title}
                   className="w-full h-[300px] object-cover rounded-md"
                 />
@@ -60,9 +56,9 @@ export default async function Books() {
                   {item.summary}
                 </p>
               </div>
-            ))}
-          </div>
-        )}
+            );
+          })}
+        </div>
       </div>
     </section>
   );
