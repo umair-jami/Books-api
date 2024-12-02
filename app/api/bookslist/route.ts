@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
+
     const booksData = books;
 
     if (!booksData || booksData.length === 0) {

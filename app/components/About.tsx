@@ -1,12 +1,12 @@
 import React from "react";
-import heroImg from "../../assets/online_book_store_-_onlinebooksoutlet.webp";
 import Image from "next/image";
+import booksStore from "../assets/online_book_store_-_onlinebooksoutlet.webp"
 
 export default function About() {
   return (
     <section className="h-[calc(100vh-4rem)] w-full px-10 py-12">
       <div>
-        <Image src={heroImg} alt="img" />
+        <Image src={booksStore} alt="img" />
       </div>
       <div className="flex items-center justify-center my-6">
         <div className="border-t border-gray-400 flex-grow"></div>

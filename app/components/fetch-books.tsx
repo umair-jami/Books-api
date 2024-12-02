@@ -1,8 +1,8 @@
 import Image from "next/image";
-import love from "../../assets/rulesoflove.webp";
-import harry from "../../assets/harry.webp";
-import ends from "../../assets/endswith.webp";
-import silent from "../../assets/silent.webp";
+import love from "../assets/rulesoflove.webp";
+import harry from "../assets/harry.webp";
+import ends from "../assets/endswith.webp";
+import silent from "../assets/silent.webp";
 
 const imgBox = [love, harry, ends, silent];
 
